@@ -1,5 +1,5 @@
 :root {
-
+    --dark-grey: #464646;
 }
 
 * {
@@ -12,7 +12,6 @@
 body {
     font-size: 1rem;
     letter-spacing: -1px;
-    
     width: 100%;
     max-width: 100vw;
 }
@@ -20,9 +19,17 @@ body {
 header {
     display: flex;
     align-items: center;
-    padding: 0 1rem;
+    padding: .5rem;
     justify-content: space-between;
     border-bottom: 1px solid black;
+    width: 100%;
+    max-width: 100vw;
+}
+
+img {
+    width: 100%;
+    margin-bottom: 1em;
+    transition: all 0.1s;
 }
 
 nav {
@@ -31,9 +38,10 @@ nav {
 }
 
 ul {
-	list-style: none;
+    list-style: none;
     display: flex;
     align-items: center;
+    gap: .5rem;
 }
 
 a {
@@ -41,11 +49,20 @@ a {
     color: black;
 }
 
-.gallery {
-    column-width: clamp(150px, 300px, 15vw);
+button {
+    min-height: 2rem;
+
+    svg {
+        height: 1.5rem;
+    }
 }
 
-.filters {
+.gallery {
+    display: block;
+    column-width: clamp(10rem, 20rem, 15vw);
+}
+
+.gallery-navigation {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -54,6 +71,61 @@ a {
     flex-direction: column;
     max-width: 100%;
 }
+
+.filter-list {
+    li {
+        min-height: 2rem;
+    }
+}
+
+.filter {
+    height: 100%;
+    background-color: var(--dark-grey);
+    color: white;
+    padding: 1rem;
+}
+
+.filter:hover {
+    background-color: white;
+    color: var(--dark-grey);
+    border: 1px solid var(--dark-grey);
+    outline: none;
+}
+
+form {
+    background-color: white;
+    border: 1px solid black;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    width: 50rem;
+    max-width: 100%;
+
+    input[type=search] {
+        padding: .5rem;
+        font-size: clamp(1rem, 2.5vw, 2rem);
+        width: 100%;
+        max-width: 100%;
+        border: none;
+        border-bottom: 1px solid black;
+        margin: .5rem 0 .5rem .5rem;
+    }
+
+    input[type=search]:active,
+    input[type=search]:focus {
+        border: none;
+        outline: none;
+    }
+
+    button {
+        background-color: white;
+        border: none;
+        padding: .5rem;
+    }
+}
+
 
 .dim {
     filter: brightness(60%);
@@ -71,6 +143,6 @@ a {
 }
 
 .links {
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
 }
