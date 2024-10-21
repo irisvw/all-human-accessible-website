@@ -1,5 +1,5 @@
 // FILTERS
-let buttons = document.querySelectorAll(".button-filter");
+let buttons = document.querySelectorAll(".filter");
 
 buttons.forEach(button => button.addEventListener("mouseenter", function () { applyFilter(button) }));
 buttons.forEach(button => button.addEventListener("focus", function () { applyFilter(button) }));
