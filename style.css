@@ -67,9 +67,33 @@ nav {
     }
 }
 
+.nav-links {
+    display: none;
+}
+
+@media screen and (min-width: 1200px) {
+    .nav-links {
+        display: flex;
+    }
+}
+
 .links {
     display: inline-flex;
     flex-direction: column;
+}
+
+li:has(.button-members),
+li:has(.button-venues),
+li:has(.button-language) {
+    display: none;
+}
+
+@media screen and (min-width: 800px) {
+    li:has(.button-members),
+    li:has(.button-venues),
+    li:has(.button-language) {
+        display: flex;
+    }
 }
 
 .nav-buttons li button {
@@ -86,7 +110,8 @@ nav {
     }
 }
 
-.nav-buttons li .tickets-button {
+.nav-buttons li .button-tickets {
+    display: none;
     background-color: yellow;
     border: 1px solid black;
     padding: 1rem;
@@ -100,6 +125,12 @@ nav {
     }
 }
 
+@media screen and (min-width: 500px) {
+    .nav-buttons li .button-tickets {
+        display: inline-flex;
+    }
+}
+
 button {
     display: inline-flex;
     align-items: center;
@@ -109,6 +140,16 @@ button {
 
     svg {
         height: 1.5rem;
+    }
+}
+
+.menu-text {
+    display: none;
+}
+
+@media screen and (min-width: 375px) {
+    .menu-text {
+        display: inline;
     }
 }
 
@@ -136,12 +177,14 @@ button {
 }
 
 .filter {
+    display: block;
     height: 100%;
-    width: 100%;
+    min-width: 9rem;
     background-color: var(--dark-grey);
     color: white;
-    padding: 1rem 2rem;
     border: 1px solid var(--dark-grey);
+    padding: 1rem;
+    text-align: center;
 
     &:hover,
     &:focus {
