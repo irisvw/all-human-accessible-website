@@ -165,6 +165,7 @@ button {
 .gallery {
     display: block;
     column-width: clamp(10rem, 20rem, 15vw);
+    gap: .75rem;
 }
 
 /* || FILTERS & SEARCH BAR */
