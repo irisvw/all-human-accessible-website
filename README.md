@@ -24,6 +24,7 @@ De instructie van deze leertaak staat in [INSTRUCTIONS](https://github.com/fdnd-
 - Betere screen reader ervaring
 
 https://github.com/irisvw/all-human-accessible-website/blob/4b28a6aceaebff270ea1d717fb575dcaa57c54a2/index.html#L58
+https://github.com/irisvw/all-human-accessible-website/blob/main/scripts/language.js
 
 - 100% lighthouse score op accessibility
 
