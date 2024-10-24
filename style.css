@@ -181,6 +181,15 @@ button {
 }
 
 .filter-list {
+    padding: 0 1rem;
+    max-width: 100vw;
+    overflow: scroll;
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+        justify-content: left;
+
     li {
         min-height: 2rem;
     }
